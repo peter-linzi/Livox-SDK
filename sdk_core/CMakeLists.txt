@@ -18,7 +18,9 @@ target_include_directories(${SDK_LIBRARY}
         PRIVATE
         src)
 
-set_target_properties(${SDK_LIBRARY} PROPERTIES PUBLIC_HEADER "include/livox_def.h;include/livox_sdk.h")
+set_target_properties(${SDK_LIBRARY} PROPERTIES
+        PUBLIC_HEADER "include/livox_def.h;include/livox_sdk.h"
+        POSITION_INDEPENDENT_CODE ON)
 
 if(WIN32)
   set(PLATFORM win)
